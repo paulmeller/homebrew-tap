@@ -7,10 +7,10 @@ class Warehouse < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/paulmeller/warehouse-cli/releases/download/v#{version}/warehouse-macos-arm64.tar.gz"
-      sha256 "e0c6b1ee443e17b639b6be540ec3239f99d1c0779270c8666fd419ecda488c8a"
+      sha256 "2e9b05168e9c4fcdbf76c60b17e4df5c9a9fd52dda7b7215c88d8e81c2beb2cb"
     else
       url "https://github.com/paulmeller/warehouse-cli/releases/download/v#{version}/warehouse-macos-x86_64.tar.gz"
-      sha256 "d79b896a81782b96af56c572cd7134dc21add37bcac1c3b9a462f6da6422d39d"
+      sha256 "84276cd123640c782edca70a5bfe44b813b8a7ab63339004416d3672b9d2fbb5"
     end
   end
 
