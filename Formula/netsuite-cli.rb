@@ -5,21 +5,21 @@
 class NetsuiteCli < Formula
   desc "CLI for the NetSuite API"
   homepage "https://github.com/paulmeller/netsuite-cli"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/paulmeller/netsuite-cli/releases/download/v0.1.0/netsuite-cli_0.1.0_darwin_amd64.tar.gz"
-      sha256 "55f708891db524af2accebf9a14e3e4d433f5a5442d04153ec27d6bd25bfe8f9"
+      url "https://github.com/paulmeller/netsuite-cli/releases/download/v0.2.0/netsuite-cli_0.2.0_darwin_amd64.tar.gz"
+      sha256 "928b0a2c20dd99cbf4ce843b0a10c71ed61d3b25333942a0822de6ca29bff2de"
 
       define_method(:install) do
         bin.install "netsuite"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/paulmeller/netsuite-cli/releases/download/v0.1.0/netsuite-cli_0.1.0_darwin_arm64.tar.gz"
-      sha256 "39ee0ec936ea37f45187b0664a0f4a6d18be30078f7f1ad303ccdd1627d52298"
+      url "https://github.com/paulmeller/netsuite-cli/releases/download/v0.2.0/netsuite-cli_0.2.0_darwin_arm64.tar.gz"
+      sha256 "df46dc0fec9156f751acad9d8019a1217f73ae7da94ccfdefaef788f4f5e39dc"
 
       define_method(:install) do
         bin.install "netsuite"
@@ -29,15 +29,15 @@ class NetsuiteCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/paulmeller/netsuite-cli/releases/download/v0.1.0/netsuite-cli_0.1.0_linux_amd64.tar.gz"
-      sha256 "0e726fc7ce6b61d377af86f718e3b1d8fe97d8985f9663f9d546c092436a658c"
+      url "https://github.com/paulmeller/netsuite-cli/releases/download/v0.2.0/netsuite-cli_0.2.0_linux_amd64.tar.gz"
+      sha256 "c0e3dc29b2628341abad1d3b6c56a3b35f45b3cef7f999b45212ea8ad88919be"
       define_method(:install) do
         bin.install "netsuite"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/paulmeller/netsuite-cli/releases/download/v0.1.0/netsuite-cli_0.1.0_linux_arm64.tar.gz"
-      sha256 "09ef925f057e05f063517ecb161780db2b3dab27bb419d79bb50abc1162debf1"
+      url "https://github.com/paulmeller/netsuite-cli/releases/download/v0.2.0/netsuite-cli_0.2.0_linux_arm64.tar.gz"
+      sha256 "ba3ec5ec1bbf8f6673cd6d01d1dad8ec4d3a6ebefb3f7ae950505916f1b5bdf3"
       define_method(:install) do
         bin.install "netsuite"
       end
