@@ -5,21 +5,21 @@
 class XeroCli < Formula
   desc "CLI for the Xero accounting API"
   homepage "https://github.com/paulmeller/xero-cli"
-  version "0.2.2"
+  version "0.2.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/paulmeller/xero-cli/releases/download/v0.2.2/xero-cli_0.2.2_darwin_amd64.tar.gz"
-      sha256 "dae6f3789e37a003daa19fd4058e781aada41ecbf596d9b147db81278c8a92e1"
+      url "https://github.com/paulmeller/xero-cli/releases/download/v0.2.3/xero-cli_0.2.3_darwin_amd64.tar.gz"
+      sha256 "5b69d307597e2ff013cbe9af4f921adc409afebf56611e48761cfb67c9a9f674"
 
       define_method(:install) do
         bin.install "xero"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/paulmeller/xero-cli/releases/download/v0.2.2/xero-cli_0.2.2_darwin_arm64.tar.gz"
-      sha256 "a05d49564afe0740f043f171d7426ac11a899971bc0340ed7c4bf51afdc992bd"
+      url "https://github.com/paulmeller/xero-cli/releases/download/v0.2.3/xero-cli_0.2.3_darwin_arm64.tar.gz"
+      sha256 "926bc53356276e7fe36cb7c267f7fffe193cbe3a269b982fc395d8a4c5c368e6"
 
       define_method(:install) do
         bin.install "xero"
@@ -29,15 +29,15 @@ class XeroCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/paulmeller/xero-cli/releases/download/v0.2.2/xero-cli_0.2.2_linux_amd64.tar.gz"
-      sha256 "7460442c41d01a663be09e4a1b7f3aed48c9bd91207a063b5770d384558e96a2"
+      url "https://github.com/paulmeller/xero-cli/releases/download/v0.2.3/xero-cli_0.2.3_linux_amd64.tar.gz"
+      sha256 "b173daee6e9999c9507c399d0e065bd36de6ce717197e6686d7b98136c4dd19f"
       define_method(:install) do
         bin.install "xero"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/paulmeller/xero-cli/releases/download/v0.2.2/xero-cli_0.2.2_linux_arm64.tar.gz"
-      sha256 "7f02509c570a324fbec53d52ba660aefb47e0718a34197d0caef2a8632285003"
+      url "https://github.com/paulmeller/xero-cli/releases/download/v0.2.3/xero-cli_0.2.3_linux_arm64.tar.gz"
+      sha256 "ea7a2f5cb4a6803f511c6f339a703535a62cb54a6a73ccff322ff43d035b2dda"
       define_method(:install) do
         bin.install "xero"
       end
