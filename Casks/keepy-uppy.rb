@@ -44,6 +44,35 @@ cask "keepy-uppy" do
             ],
             quit:         "au.com.workwireless.keepy-uppy"
 
+  # Registers the background services after every install and upgrade.
+  #
+  # **Why unconditionally, rather than only on upgrade.** An upgrade is an
+  # uninstall followed by an install, so the `uninstall` stanza below has
+  # already run `reset` and unregistered both services by the time this runs —
+  # which means "only re-register if the daemon is still answering" would never
+  # fire on the one path it was written for. Asking `keepy-uppy status` here
+  # tells you nothing useful for the same reason.
+  #
+  # Running it on a fresh install is not a cost worth avoiding: `setup` is
+  # exactly what the app's own Enable button does, it does not block on a
+  # password, and a user who just installed a keep-awake utility is not
+  # surprised to be asked to approve its background items.
+  #
+  # `must_succeed: false` deliberately. A failure here — most likely macOS
+  # declining until the user approves in Login Items — must not fail the whole
+  # install and leave a cask Homebrew thinks is broken. The app reports its own
+  # service state in Settings, which is where an unapproved service is visible
+  # and fixable.
+  #
+  # It runs as the user, which is required rather than incidental: `setup`
+  # registers a *per-user* agent alongside the daemon, and one registered by
+  # root belongs to root.
+  postflight do
+    system_command "#{appdir}/Keepy Uppy.app/Contents/MacOS/keepy-uppy",
+                   args: ["setup"],
+                   must_succeed: false
+  end
+
   # Left behind by `reset` on purpose — your triggers, guards and wake-mode
   # choices outlive a reinstall unless you ask for them to go.
   zap trash: [
@@ -51,9 +80,9 @@ cask "keepy-uppy" do
   ]
 
   caveats <<~EOS
-    Keepy Uppy needs its background services approved once before it can do
-    anything. Open it and hit "Enable Keepy Uppy", then approve the two Login
-    Items macOS asks about.
+    The background services are registered for you. macOS may ask you to
+    approve them once, in System Settings > General > Login Items & Extensions
+    — Settings > General in Keepy Uppy shows whether they are running.
 
     On a headless Mac that will never run the app:
 
