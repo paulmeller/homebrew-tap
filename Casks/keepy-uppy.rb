@@ -1,6 +1,6 @@
 cask "keepy-uppy" do
-  version "0.1.2"
-  sha256 "86cf98f4b168b8ee017525f61a558459f1338e68a06ad7a3e67e7e9409e81dd6"
+  version "0.1.3"
+  sha256 "f66d7ac55fcb2f2d5d529912a9f747bdeb7a00c76360272edbf52d40ea344f1e"
 
   url "https://github.com/paulmeller/keepy-uppy/releases/download/v#{version}/Keepy.Uppy.dmg"
   name "Keepy Uppy"
