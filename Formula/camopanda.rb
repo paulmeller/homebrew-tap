@@ -11,7 +11,6 @@ class Camopanda < Formula
 
       def install
         bin.install "camopanda"
-        bin.install "lightpanda"
       end
     end
   end
@@ -23,7 +22,6 @@ class Camopanda < Formula
 
       def install
         bin.install "camopanda"
-        bin.install "lightpanda"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
@@ -32,7 +30,6 @@ class Camopanda < Formula
 
       def install
         bin.install "camopanda"
-        bin.install "lightpanda"
       end
     end
   end
