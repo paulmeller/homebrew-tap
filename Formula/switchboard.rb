@@ -1,8 +1,8 @@
 class Switchboard < Formula
   desc "Launch the right coding CLI on the right account"
   homepage "https://github.com/paulmeller/switchboard"
-  url "https://github.com/paulmeller/switchboard/archive/refs/tags/v0.1.2.tar.gz"
-  sha256 "3230f65a7f58c723c10948ab9b0d5ee10d2d319c960a1aec2d104184a7bebbbb"
+  url "https://github.com/paulmeller/switchboard/archive/refs/tags/v0.1.3.tar.gz"
+  sha256 "8bec15d46150aa84ea4f45c50d5da9168b351cf6059ffe5871040ffeee6e932f"
   license "MIT"
 
   depends_on "go" => :build
@@ -12,6 +12,6 @@ class Switchboard < Formula
   end
 
   test do
-    assert_match "0.1.2", shell_output("#{bin}/sb --version")
+    assert_match "0.1.3", shell_output("#{bin}/sb --version")
   end
 end
