@@ -16,6 +16,7 @@ you.
 |---|---|
 | [`camopanda`](Formula/camopanda.rb) | Test website and API responses to different browser and device request headers |
 | [`netsuite-cli`](Formula/netsuite-cli.rb) | CLI for the NetSuite API |
+| [`switchboard`](Formula/switchboard.rb) | Launch the right coding CLI on the right account (`sb`) |
 | [`warehouse`](Formula/warehouse.rb) | Fast CLI for personal data warehouse — extraction, FTS5 search, and browsing |
 | [`xero-cli`](Formula/xero-cli.rb) | CLI for the Xero accounting API |
 
